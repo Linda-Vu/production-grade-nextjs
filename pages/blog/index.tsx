@@ -3,11 +3,10 @@ import { Pane, majorScale } from 'evergreen-ui'
 import matter from 'gray-matter'
 import path from 'path'
 import fs from 'fs'
-import orderby from 'lodash.orderby'
-import Container from '../../components/container'
-import HomeNav from '../../components/homeNav'
-import PostPreview from '../../components/postPreview'
-import { posts, posts as postsFromCMS } from '../../content'
+import Container from '../../components/Container'
+import HomeNav from '../../components/HomeNav'
+import PostPreview from '../../components/PostPreview'
+import { posts as postsFromCMS } from '../../content'
 
 const Blog = ({ posts }) => {
   return (

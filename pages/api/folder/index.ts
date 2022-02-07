@@ -3,7 +3,7 @@ import nc from 'next-connect'
 import { folder } from '../../../db'
 import middleware from '../../../middleware/all'
 import onError from '../../../middleware/error'
-import { Request } from '../../../types'
+import type { Request } from '../../../types'
 
 const handler = nc<Request, NextApiResponse>({
   onError,

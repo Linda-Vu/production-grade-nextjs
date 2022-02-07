@@ -17,14 +17,14 @@ const NewFolderDialog = ({ onNewFolder, close, ...props }) => {
     <Dialog
       {...props}
       title="New Folder"
-      confirmLabel="create"
+      confirmLabel="Create"
       intent="success"
       onConfirm={handleNewFolder}
       isConfirmLoading={saving}
       onCancel={close}
       onCloseComplete={close}
     >
-      <TextInput value={name} onChange={(e) => setName(e.target.value)} placeholder="folder name" />
+      <TextInput value={name} onChange={(e) => setName(e.target.value)} placeholder="Folder name" />
     </Dialog>
   )
 }

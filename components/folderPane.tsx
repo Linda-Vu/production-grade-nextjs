@@ -2,8 +2,8 @@ import React, { FC, useState } from 'react'
 import { Pane, Heading, majorScale, DocumentIcon, Button } from 'evergreen-ui'
 import Link from 'next/link'
 import { getRandomGradientCss } from '../utils/gradients'
-import NewFolderButton from './newFolderButton'
-import NewDocDialog from './newDocumentDialog'
+import NewFolderButton from './NewFolderButton'
+import NewDocDialog from './NewDocDialog'
 
 const FolderPane: FC<{ folder: any; docs: any[] }> = ({ folder, docs }) => {
   const { bg, image } = getRandomGradientCss()

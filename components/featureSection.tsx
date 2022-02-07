@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Pane, Heading, Paragraph, majorScale } from 'evergreen-ui'
 import Image from 'next/image'
-import Container from './container'
+import Container from './Container'
 
 const FeatureSection: FC<{ invert?: boolean; title: string; body: string; image: string }> = ({
   title,

@@ -2,14 +2,14 @@ import React, { FC } from 'react'
 import { Pane, majorScale, Text, Button } from 'evergreen-ui'
 import NextLink from 'next/link'
 import { useSession } from 'next-auth/client'
-import Container from './container'
-import Logo from './logo'
+import Container from './Container'
+import Logo from './Logo'
 
 const HomeNav: FC<{ links?: { name: string; link: string }[] }> = ({ links }) => {
   const [session] = useSession()
 
   return (
-    <nav>
+    <nav style={{ position: 'relative', zIndex: 10, backgroundColor: '#fff' }}>
       <Pane width="100vw" paddingY={majorScale(1)} borderBottom height={majorScale(9)}>
         <Container height="100%">
           <Pane display="flex" justifyContent="space-between" alignItems="center" height="100%">

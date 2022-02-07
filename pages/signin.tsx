@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { Pane, majorScale, Text } from 'evergreen-ui'
 import { signIn, useSession } from 'next-auth/client'
-import Logo from '../components/logo'
+import Logo from '../components/Logo'
 
-import SocialButton from '../components/socialButton'
+import SocialButton from '../components/SocialButton'
 import { useRouter } from 'next/router'
 
 const Signin = () => {

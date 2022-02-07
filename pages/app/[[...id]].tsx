@@ -2,15 +2,14 @@ import React, { FC, useState } from 'react'
 import { getSession, useSession } from 'next-auth/client'
 import { Pane, Dialog, majorScale } from 'evergreen-ui'
 import { useRouter } from 'next/router'
-import Logo from '../../components/logo'
-import FolderList from '../../components/folderList'
-import NewFolderButton from '../../components/newFolderButton'
+import Logo from '../../components/Logo'
+import FolderList from '../../components/FolderList'
+import NewFolderButton from '../../components/NewFolderButton'
 import { connectToDB, folder, doc } from '../../db'
-import { UserSession } from '../../types'
-import User from '../../components/user'
-import FolderPane from '../../components/folderPane'
-import DocPane from '../../components/docPane'
-import NewFolderDialog from '../../components/newFolderDialog'
+import User from '../../components/User'
+import FolderPane from '../../components/FolderPane'
+import DocPane from '../../components/DocPane'
+import NewFolderDialog from '../../components/NewFolderDialog'
 
 const App: FC<{ folders?: any[]; activeFolder?: any; activeDoc?: any; activeDocs?: any[] }> = ({
   folders,
@@ -19,7 +18,6 @@ const App: FC<{ folders?: any[]; activeFolder?: any; activeDoc?: any; activeDocs
   activeDocs,
 }) => {
   const router = useRouter()
-  // revisit
   const [session, loading] = useSession()
 
   const [newFolderIsShown, setIsShown] = useState(false)
@@ -103,12 +101,12 @@ export async function getServerSideProps(context) {
   props.folders = folders
 
   if (context.params.id) {
-    const activeFolder = folders.find((f) => f._id === context.params.id[0]) // at runtime, id = [XXrtMA5ZFydW]
-    const activeDocs = await doc.getDocsByFolder(db, activeFolder._id) // [...]
+    const activeFolder = folders.find((f) => f._id === context.params.id[0])
+    const activeDocs = await doc.getDocsByFolder(db, activeFolder._id)
     props.activeFolder = activeFolder
     props.activeDocs = activeDocs
 
-    const activeDocId = context.params.id[1] // undefined
+    const activeDocId = context.params.id[1]
 
     if (activeDocId) {
       props.activeDoc = await doc.getOneDoc(db, activeDocId)

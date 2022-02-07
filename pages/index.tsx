@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import { Pane, majorScale } from 'evergreen-ui'
-import Container from '../components/container'
-import Hero from '../components/hero'
-import HomeNav from '../components/homeNav'
-import FeatureSection from '../components/featureSection'
+import Container from '../components/Container'
+import Hero from '../components/Hero'
+import HomeNav from '../components/HomeNav'
+import FeatureSection from '../components/FeatureSection'
 import { home } from '../content'
 
 const Home: FC<{ content: { hero: any; features: any[] } }> = ({ content }) => {
@@ -27,9 +27,7 @@ const Home: FC<{ content: { hero: any; features: any[] } }> = ({ content }) => {
         ))}
       </main>
       <footer>
-        <Pane background="overlay" paddingY={majorScale(9)}>
-          <Container>hello</Container>
-        </Pane>
+        <Pane background="overlay" paddingY={majorScale(9)}></Pane>
       </footer>
     </Pane>
   )

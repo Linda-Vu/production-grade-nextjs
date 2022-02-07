@@ -17,14 +17,14 @@ const NewDocDialog = ({ onNewDoc, close, ...props }) => {
     <Dialog
       {...props}
       title="New Document"
-      confirmLabel="create"
+      confirmLabel="Create"
       intent="success"
       onConfirm={handleNewDocument}
       isConfirmLoading={saving}
       onCancel={close}
       onCloseComplete={close}
     >
-      <TextInput value={name} onChange={(e) => setName(e.target.value)} placeholder="doc name" />
+      <TextInput value={name} onChange={(e) => setName(e.target.value)} placeholder="Document name" />
     </Dialog>
   )
 }

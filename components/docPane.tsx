@@ -4,7 +4,7 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { getRandomGradientCss } from '../utils/gradients'
 
-const Editor = dynamic(() => import('./editor'), { ssr: false })
+const Editor = dynamic(() => import('./Editor'), { ssr: false })
 
 const DocPane: FC<{ folder: any; doc: any }> = ({ folder, doc }) => {
   const { bg, image } = getRandomGradientCss()
